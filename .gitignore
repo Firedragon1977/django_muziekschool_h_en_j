@@ -4,11 +4,5 @@ __pycache__/
 # Ignore .vscode folder
 .vscode/
 
-# Ignore virtual environment folder
-myvenv/
-
 # Ignore compiled Python files
 *.pyc
-
-# Ignore requirements.txt file
-requirements.txt
