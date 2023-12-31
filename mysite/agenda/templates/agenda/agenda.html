@@ -1,0 +1,32 @@
+<!--
+    Het bestand "my_filters.py" inladen voor het correct weergeven van de bedragen.
+-->
+{% load my_filters %}
+<!--
+    dictsort         = van oud naar nieuw.
+    dictsortreversed = van nieuw naar oud.
+-->
+{% for activiteit in activiteiten|dictsort:'datum' %}
+    <table class="agenda">
+        <tr>
+            <td><strong>Datum</strong></td>
+            <td>{{ activiteit.datum|date:"l d F Y" }}</td>
+        </tr>
+        <tr>
+            <td><strong>Omschrijving</strong></td>
+            <td>{{ activiteit.omschrijving }}</td>
+        </tr>
+        <tr>
+            <td><strong>Begintijd</strong></td>
+            <td>{{ activiteit.begintijd|time:"H:i" }} uur</td>
+        </tr>
+        <tr>
+            <td><strong>Eindtijd</strong></td>
+            <td>{{ activiteit.eindtijd|time:"H:i" }} uur</td>
+        </tr>
+        <tr>
+            <td><strong>Kosten</strong></td>
+            <td>€{{ activiteit.kosten|custom_format }}</td>
+        </tr>
+    </table>
+{% endfor %}
