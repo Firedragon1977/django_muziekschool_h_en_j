@@ -132,4 +132,6 @@ CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://localhost:3000',
     'http://192.168.1.12:3000',
+    # De onderstaande url is online.
+    'https://firedragon1977.github.io',
 ]
